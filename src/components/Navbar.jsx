@@ -18,6 +18,7 @@ import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import { Height } from '@mui/icons-material'
 
+
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false)
   const menuOptions = [
@@ -49,13 +50,13 @@ const Navbar = () => {
       </div>
       <div className="navbar-links-container">
         <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Testimonials</a>
-        <a href="">Contact</a>
+        <a href="/about">About</a>
+        <a href="/testimonial">Testimonials</a>
+        <a href="/contact">Contact</a>
         <a href="">
           <BsCart2 className="navbar-cart-icon" />
         </a>
-        <button className="primary-button">Bookings Now</button>
+        <button className="primary-button">Log in/Sign up</button>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
