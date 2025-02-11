@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Aurora from '../pages/Aurora'
 import Logo from '../assets/zeus-removebg-preview.png'
 import { useNavigate } from 'react-router-dom'
@@ -63,13 +64,13 @@ const Navbar = () => {
         <img src={Logo} alt=""/>
       </div>
       <div className="navbar-links-container">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/testimonial">Testimonials</a>
-        <a href="/contact">Contact</a>
-        <a href="">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/testimonial">Testimonials</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="">
           <BsCart2 className="navbar-cart-icon" />
-        </a>
+          </Link>
         <button className="primary-button">Log in/Sign up</button>
       </div>
       <Aurora
