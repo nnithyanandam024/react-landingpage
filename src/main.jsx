@@ -5,7 +5,7 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename='/react-landingpage'>
+  <BrowserRouter basename="/react-landingpage">
   <StrictMode>
     <App />
   </StrictMode>
