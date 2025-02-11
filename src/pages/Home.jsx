@@ -1,8 +1,6 @@
 import React from 'react'
 import '../App.css'
 import DecryptedText from './DecryptedText'
-import { useNavigate } from 'react-router-dom'
-import BannerBackground from '../assets/home-banner-background.PNG'
 import BannerImage from '../assets/home-banner-image.png'
 import { FiArrowRight } from 'react-icons/fi'
 
