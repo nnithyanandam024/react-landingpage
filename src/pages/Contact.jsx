@@ -1,24 +1,27 @@
 import React from 'react';
+import '../styles/Contact.css';
 
 const Contact = () => {
     return (
-        <div>
+        <div className="contact-page">
             <h1>Contact Us</h1>
+            <div className="container">
             <form>
-                <div>
-                    <label htmlFor="name">Name:</label>
+                <div className="name">
+                    <label>Name: </label>
                     <input type="text" id="name" name="name" required />
                 </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
+                <div className="email">
+                    <label>Email: </label>
                     <input type="email" id="email" name="email" required />
                 </div>
-                <div>
-                    <label htmlFor="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+                <div className="message">
+                    <label>Message: </label>
+                    <input id="message" name="message" required></input>
                 </div>
                 <button type="submit">Submit</button>
             </form>
+            </div>
         </div>
     );
 };
