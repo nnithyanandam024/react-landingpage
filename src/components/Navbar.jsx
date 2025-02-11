@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import Logo from '../assets/Zeus.svg'
+import Aurora from '../pages/Aurora'
+import Logo from '../assets/zeus-removebg-preview.png'
 import { BsCart2 } from 'react-icons/bs'
 import { HiOutlineBars3 } from 'react-icons/hi2'
 import {
@@ -17,6 +18,7 @@ import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import { Height } from '@mui/icons-material'
+
 
 
 const Navbar = () => {
@@ -45,11 +47,12 @@ const Navbar = () => {
   ]
   return (
     <nav>
+     
       <div className="nav-logo-container">
         <img src={Logo} alt=""/>
       </div>
       <div className="navbar-links-container">
-        <a href="">Home</a>
+        <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/testimonial">Testimonials</a>
         <a href="/contact">Contact</a>
@@ -58,6 +61,10 @@ const Navbar = () => {
         </a>
         <button className="primary-button">Log in/Sign up</button>
       </div>
+      <Aurora
+  colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+  speed={0.5}
+/>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
       </div>

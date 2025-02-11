@@ -5,12 +5,16 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Testimonial from './pages/Testimonial.jsx'
+import Navbar from './components/Navbar.jsx'
+import Aurora from './pages/Aurora.jsx'
 
 function App() {
   
 
   return (
     <>
+      <Navbar/>
+    
     <div className="App">
 
     { <Routes>
