@@ -2,7 +2,7 @@ import React from 'react'
 import '../App.css'
 import { useNavigate } from 'react-router-dom'
 import DecryptedText from './DecryptedText'
-import BannerImage from '../../public/home-banner-image.jpg'
+import BannerImage from '../assets/home-banner-image.jpg'
 import { FiArrowRight } from 'react-icons/fi'
 
 function disableScroll() {
