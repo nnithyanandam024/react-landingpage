@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Aurora from '../pages/Aurora'
 import Logo from '../assets/zeus-removebg-preview.png'
+import { useNavigate } from 'react-router-dom'
 import { BsCart2 } from 'react-icons/bs'
 import { HiOutlineBars3 } from 'react-icons/hi2'
 import {
@@ -23,28 +24,38 @@ import { Height } from '@mui/icons-material'
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false)
+  const navigate = useNavigate();
   const menuOptions = [
     {
       text: "Home",
-      icon: <HomeIcon />
+      icon: <HomeIcon />,
+      path: "/"
     },
     {
       text: "About",
-      icon: <InfoIcon />
+      icon: <InfoIcon />,
+      path: "/about"
     },
     {
       text: "Testimonials",
-      icon: <CommentRoundedIcon />
+      icon: <CommentRoundedIcon />,
+      path: "/testimonial"
     },
     {
       text: "Contact",
-      icon: <PhoneRoundedIcon />
+      icon: <PhoneRoundedIcon />,
+      path: "/contact"
     },
     {
       text: "Cart",
       icon: <ShoppingCartRoundedIcon />
     }
   ]
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    setOpenMenu(false);
+  };
   return (
     <nav>
      
@@ -78,7 +89,7 @@ const Navbar = () => {
           <List>
             {menuOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton>
+                <ListItemButton  onClick={() => handleNavigation(item.path)}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
                     <ListItemText primary={item.text} />
                 </ListItemButton>
